@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt A-Cat/Dog</title>
+  <link rel="stylesheet" href="../Q8FindCatDogPage.css">
+  <script src="js/updateTime.js"></script>
+  <script src="validateForm.js"></script>
+</head>
+<body>
+<header>
+  <div class="container header">
+    <a href="Q8HomePage">
+      <img
+        src="https://www.catster.com/wp-content/uploads/2023/11/Dog-and-cat-with-together-in-bed-AJR_photo-Shutterstock-e1668494842955.jpg"
+        alt="Adopt A-Cat/Dog Logo">
+    </a>
+    <h1>Adopt Cat/Dog</h1>
+    <p>Website for adopting a cat or dog in your local area.</p>
+    <p>Current Time: <span id="dateTimeDisplay"></span></p>
+  </div>
+</header>
+<nav>
+  <ul>
+    <li><a href="Q8HomePage">Home</a></li>
+    <li><a href="Q8BrowsePage">Browse Available Pets</a></li>
+    <li><a href="Q8FindCatDogPage">Find a dog/cat</a></li>
+    <li><a href="Q8DogCarePage">Dog Care</a></li>
+    <li><a href="Q8CatCarePage">Cat Care</a></li>
+    <li><a href="Q8GiveAwayPage">Have a pet to give away</a></li>
+    <li><a href="Q8ContactPage">Contact Us</a></li>
+  </ul>
+</nav>
+<main>
+  <h2>Find a Dog/Cat</h2>
+  <form id="findPetForm">
+    <fieldset>
+      <legend>Select Animal</legend>
+      <label for="animal">Animal:</label>
+      <select name="animal" id="animal" required>
+        <option value="">Please select an animal</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="doesnt_matter">Doesn't Matter</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Details</legend>
+      <label for="breed">Breed:</label>
+      <select name="breed" id="breed" required>
+        <option value="">Any breed</option>
+        <option value="NatureSystem">Nature System (Dog)</option>
+        <option value="DogShowSystem">Dog Show System (Dog)</option>
+        <option value="DevonRex">Devon Rex (Cat)</option>
+        <option value="CornishRex">Cornish Rex (Cat)</option>
+      </select>
+      <label for="age">Age:</label>
+      <select name="age" id="age" required>
+        <option value="">Any age</option>
+        <option value="young">Young (0-2 years)</option>
+        <option value="adult">Adult (2-7 years)</option>
+        <option value="senior">Senior (7+ years)</option>
+        <option value="doesnt_matter">Doesn't Matter</option>
+      </select>
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender" required>
+        <option value="">Any gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="doesnt_matter">Doesn't Matter</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Compatibility</legend>
+      <input type="checkbox" id="compatibility_dogs" name="compatibility_dogs">
+      <label for="compatibility_dogs">Gets along with other dogs</label>
+      <input type="checkbox" id="compatibility_cats" name="compatibility_cats">
+      <label for="compatibility_cats">Gets along with other cats</label>
+      <input type="checkbox" id="compatibility_children" name="compatibility_children">
+      <label for="compatibility_children">Suitable for a family with small children</label>
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Search</button>
+    <button type="reset" class="btn btn-secondary">Clear</button>
+  </form>
+</main>
+<footer>
+  <a href="Q8PrivacyPage">Privacy/Disclaimer Statement</a>
+</footer>
+</body>
+</html>

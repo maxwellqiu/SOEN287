@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt A-Cat/Dog</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/js/updateTime.js"></script>
+  <style>
+    /* Base styles */
+    body,
+    html {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 20%;
+      height: auto;
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    footer {
+      background-color: lightblue;
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-top: 2px solid lightcyan;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav {
+        position: static;
+        width: 100%;
+        bottom: auto;
+        top: auto;
+      }
+
+      main {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 769px) {
+      nav {
+        width: 200px;
+        height: calc(100vh - 10%);
+      }
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        padding: 15px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="/Q8HomePage">Home</a></li>
+      <li><a href="/Q8FindCatDogPage">Find a dog/cat</a></li>
+      <li><a href="/Q8DogCarePage">Dog and Cat Care</a></li>
+      <li><a href="/addPet">Register Your Pet</a></li>
+      <li><a href="/register">Create an Account</a></li>
+      <li><a href="/logout">Logout</a></li>
+      <li><a href="/Q8ContactPage">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Find Your New Best Friend!</h2>
+      <p>Explore our wide range of adorable cats and dogs waiting to find a loving home. Whether you are looking for a
+        playful puppy or a calm companion, we have the perfect match for you.</p>
+
+    </section>
+
+    <aside>
+      <h3>Why Adopt?</h3>
+      <p>Adopting a pet not only saves a life but also can greatly improve your own! Pets have been shown to improve
+        owners' mental and physical health, so consider adding a new member to your family today.</p>
+      <a href="/Q8FindCatDogPage" class="button primary">Find a Dog or a Cat</a>
+
+      <h3>Pet Care Instructions</h3>
+      <p>After you adopt a pet, they become a part of your family. Here are some essential care instructions for cats
+        and dogs to ensure they lead a happy and healthy life.</p>
+      <h3>Dog Care Section</h3>
+      <a href="/Q8DogCarePage" class="button secondary">Dog Care Instructions</a>
+
+    </aside>
+  </main>
+
+</body>
+
+</html>

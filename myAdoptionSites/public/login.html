@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        nav {
+            float: left;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding-top: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 20px 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Q8HomePage">Home</a></li>
+            <li><a href="/Q8FindCatDogPage">Find a dog/cat</a></li>
+            <li><a href="/Q8DogCarePage">Dog and Cat Care</a></li>
+            <li><a href="/addPet">Register Your Pet</a></li>
+            <li><a href="/register">Create an Account</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Login</h1>
+
+    <form id="loginForm" action="/login" method="POST">
+        <input type="text" name="username" id="username" placeholder="Username" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="/register">Create one here</a>.</p>
+
+    <div id="errorMessages" class="error"></div>
+</body>
+
+</html>

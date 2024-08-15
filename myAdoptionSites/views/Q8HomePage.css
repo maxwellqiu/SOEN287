@@ -1,0 +1,92 @@
+/* Base styles */
+body, html {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  max-width: 20%;
+  height: auto;
+}
+
+nav {
+  float: left;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 20px 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  margin-left: 220px; /* Margin adjusted for sidebar */
+  padding: 20px;
+  min-height: 100vh; /* Full height for main content */
+}
+
+footer {
+  background-color: lightblue;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Ensure it spans the full width */
+  right: 0; /* Ensure it spans the full width */
+  width: 100%;
+  border-top: 2px solid lightcyan;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    position: static; /* Avoid fixed positioning on small screens */
+    width: 100%; /* Full width */
+    bottom: auto;
+    top: auto;
+  }
+
+  main {
+    margin: 0; /* Reset margin for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    width: 200px; /* Fixed width for larger screens */
+    height: calc(100vh - 10%); /* Adjusted height to prevent overlap with footer */
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 15px 10px; /* More padding on smaller screens */
+  }
+}

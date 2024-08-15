@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="/nav.css">
+    <script src="/js/updateTime.js"></script>
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Q8HomePage">Home</a></li>
+            <li><a href="/Q8FindCatDogPage">Find a dog/cat</a></li>
+            <li><a href="/Q8DogCarePage">Dog and Cat Care</a></li>
+            <li><a href="/addPet">Register Your Pet</a></li>
+            <li><a href="/register">Create an Account</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/Q8ContactPage">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Create an Account</h1>
+
+        <form id="registerForm" action="/register" method="POST">
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <div id="errorMessages" class="error"></div>
+    </main>
+
+    <script>
+        document.getElementById("registerForm").onsubmit = function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessages = [];
+
+            // Validation criteria
+            var usernameRegex = /^[A-Za-z0-9]+$/;
+            var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
+
+            // Validate username
+            if (!username.match(usernameRegex)) {
+                errorMessages.push("Username can only contain letters and digits.");
+            }
+
+            // Validate password
+            if (!password.match(passwordRegex)) {
+                errorMessages.push("Password must be at least 4 characters long and contain at least one letter and one digit.");
+            }
+
+            // Show error messages or submit the form
+            if (errorMessages.length > 0) {
+                document.getElementById("errorMessages").innerHTML = errorMessages.join("<br>");
+            } else {
+                document.getElementById("errorMessages").innerHTML = "";
+                this.submit(); // Submit the form if validation passes
+            }
+        };
+    </script>
+
+</body>
+
+</html>

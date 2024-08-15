@@ -1,0 +1,189 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  max-width: 20%;
+  height: auto;
+}
+
+nav {
+  float: left;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 20px 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  margin-left: 220px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+form {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"], input[type="reset"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="reset"] {
+  background-color: #f44336;
+}
+
+footer {
+  background-color: lightblue;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 1px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-top: 1px solid lightcyan;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: static; /* Avoid fixed positioning on small screens */
+    width: 100%; /* Full width */
+    bottom: auto;
+    top: auto;
+  }
+
+  main {
+    margin: 0; /* Reset margin for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    width: 200px; /* Fixed width for larger screens */
+    height: calc(100vh - 10%); /* Adjusted height to prevent overlap with footer */
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 1%;
+  }
+}
+
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"], input[type="reset"] {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+input[type="reset"] {
+  background-color: #f44336; /* Red */
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  opacity: 0.8;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #4A90E2;
+  outline: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  margin-bottom: 15px; /* Space between each checkbox container */
+}
+
+.checkbox-label {
+  margin-left: 10px; /* Space between checkbox and label */
+  white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+input[type="checkbox"] {
+  margin: 0 10px 0 0; /* Space to the right of the checkbox */
+  cursor: pointer; /* Makes it clear it's clickable */
+  width: 20px; /* Width of the checkbox */
+  height: 20px; /* Height of the checkbox */
+  flex-shrink: 0; /* Prevents checkbox from resizing */
+}
+
+@media (max-width: 768px) {
+  .checkbox-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkbox-label {
+    margin-left: 0;
+  }
+}

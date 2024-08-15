@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="/Q8ContactUsPage.css">
+  <script src="/js/updateTime.js"></script>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="/Q8HomePage">Home</a></li>
+    <li><a href="/Q8FindCatDogPage">Find a dog/cat</a></li>
+    <li><a href="/Q8DogCarePage">Dog and Cat Care</a></li>
+    <li><a href="/addPet">Register Your Pet</a></li>
+    <li><a href="/register">Create an Account</a></li>
+    <li><a href="/logout">Logout</a></li>
+    <li><a href="/Q8ContactPage">Contact Us</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="contact-info">
+    <h2>Contact Us</h2>
+    <p>If you have any queries or need further information, please use the form below or reach out directly:</p>
+    <div class="personal-info">
+      <p><strong>Your Name:</strong> Wenyang Qiu</p>
+      <p><strong>Student ID:</strong> 26888879</p>
+      <p><strong>Email:</strong> qiu.maxwell@gmail.com</p>
+    </div>
+  </section>
+  <section class="contact-form">
+    <h2>Send Us a Message</h2>
+    <form action="/process-contact-form" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Type your message here" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+  </section>
+</main>
+
+</body>
+</html>

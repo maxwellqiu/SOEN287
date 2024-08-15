@@ -1,0 +1,5 @@
+1:user1:cat:Labrador:young:male
+2:user2:cat:Siamese:young:female
+3:user3:undefined:1111:young:male
+4:testqq:undefined:Siamese:young:male
+5:user1:dog:Siamese:adult:male
